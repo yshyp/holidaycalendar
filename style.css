@@ -1,0 +1,91 @@
+/* Basic styling for the calendar */
+.calendar {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.calendar-header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.calendar-navigation {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+}
+
+.calendar-navigation a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.calendar-navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Grid layout for days */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-top: 1px solid #ddd;
+}
+
+/* Header for the days of the week */
+.calendar-day-header {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Styling for each day */
+.calendar-day {
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.calendar-day:nth-child(7n) {
+    border-right: none;
+}
+
+/* Day number styling */
+.calendar-day-number {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+/* Holiday styling */
+.calendar-holiday {
+    background-color: #FFDDDD;
+    color: #FF5722;
+    border: 2px solid #FF5722;
+    border-radius: 4px;
+    padding: 5px;
+    font-size: 0.9em;
+}
+
+/* Style for weekends */
+.weekend {
+    background-color: #FFDDDD;
+    color: #FF5722; /* Optional: to make weekend text stand out more */
+}
+
+/* Ensure the last row aligns correctly */
+.calendar-day:nth-last-child(-n+7) {
+    border-bottom: none; /* Remove bottom border for the last row */
+}
